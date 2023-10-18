@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Run Rate Calculator</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dubrox/Multiple-Dates-Picker-for-jQuery-UI@master/jquery-ui.multidatespicker.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"
+    />
+
+  </head>
+  <body>
+  
+    <h1>Daily Run Rate Calculator</h1>
+
+    <div>
+
+    <form action="/save-data" method="post">
+      <table id="drr-calculator" class="container">
+        <thead>
+          <tr>
+            <th>Action</th>
+            <th>  ID</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Month, Year</th>
+            <th>Dates Excluded</th>
+            <th>Number of Days</th>
+            <th>Lead Count</th>
+            <th>Expected DRR</th>
+            <th>Last Update</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>
+              <input type="text" name="id" id="id_value" placeholder="ID" />
+            </td>
+            <td>
+              <input type="text" name="startDate" id="start_date" placeholder="Start Date"/>
+            </td>
+            <td>
+              <input type="text" name="endDate" id="end_date" placeholder="End Date" />
+            </td>
+            <td id="month-year"></td>
+  
+            <td><input type="text" name="datePick" id="datePick" class="datepick-input" placeholder="Excluded Date"/></td>
+  
+            <td id="number-of-days"></td>
+            <td>
+              <input type="text" name="lead_count" id="lead_count" placeholder="Lead Count" />
+            </td>
+            <td id="expected-drr"></td>
+            <td id="last-update">
+              <input type="button" class="save-button" id="Save-button" value="Save" />
+              <input type="button" id="Cancel-button" value="Cancel" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
